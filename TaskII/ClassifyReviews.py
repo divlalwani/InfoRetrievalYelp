@@ -28,6 +28,10 @@ from sklearn.cross_validation import train_test_split
 
 
 def read_json():
+    """
+    The function is used to read the content in the JSON file and then add each line to a list
+    :return: list of JSON strings
+    """
     with open("Ratings.json") as json_data:
         json_list = []
         for line in json_data:
@@ -37,7 +41,17 @@ def read_json():
 
 
 def pre_process(text):
+    """
+    Function used to process the given text
+    1. Replace ,.'" with ''
+    2. Tokenzie the text using NLTK word tokenizer
+    3. Remove stop words from the token.
+    4. Convert the tokens to lower case
+    5. Lemmatize the tokens using WordNet Lemmatizer
 
+    :param text: raw review text
+    :return: processed tokens
+    """
     # replace (,.'") with ''
     text = text.replace(',', '')
     text = text.replace('.', '')
@@ -65,6 +79,11 @@ def pre_process(text):
 
 
 def CalculateSVM(data=None):
+    """
+    Function is used to classify review text based on Support Vector Machine Classifier
+    :param data: Review text with the rating from the data set
+    :return: print the accuracy Score
+    """
     vectorizer = TfidfVectorizer(tokenizer=pre_process)
     classifier = LinearSVC()
     train, test = train_test_split([(i['text'], i['stars']) for i in data],
@@ -78,6 +97,11 @@ def CalculateSVM(data=None):
 
 
 def CalculateMNB(data=None):
+    """
+    Function is used to classify review text based on Multinomial Bayes Classifier
+    :param data: Review text with the rating from the data set
+    :return: print the accuracy Score
+    """
     vectorizer = TfidfVectorizer(tokenizer=pre_process)
     classifier = MultinomialNB()
     train, test = train_test_split([(i['text'], i['stars']) for i in data],
@@ -91,6 +115,11 @@ def CalculateMNB(data=None):
 
 
 def CalculateSVR(data=None):
+    """
+    Function is used to classify review text based on Support Vector Regression Classifier
+    :param data: Review text with the rating from the data set
+    :return: print the accuracy Score
+    """
     vectorizer = TfidfVectorizer(tokenizer=pre_process)
     classifier = SVR(kernel='linear')
     train, test = train_test_split([(i['text'], i['stars']) for i in data],
