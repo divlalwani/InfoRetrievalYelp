@@ -1,7 +1,7 @@
 //***************************************************************************************
-//		Modified by Jayagowri on 12/7/2014.
-//		Note: Input text should have words in the form - word#pos where pos 
-//					is the part of speech - a for adjective, v for verb, n for noun, r for adverb
+//	Modified by Jayagowri on 12/7/2014.
+//	Note: Input text should have words in the form - word#pos where pos 
+//		  is the part of speech - a for adjective, v for verb, n for noun, r for adverb
 //***************************************************************************************
 //    Copyright 2013 Petter Tornberg
 //
