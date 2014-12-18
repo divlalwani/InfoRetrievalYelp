@@ -10,6 +10,22 @@ Categorize the business based on the review text. Idea was to follow Machine Lea
 
 Here, we use Bag-of-words model and Naive Bayes Algorithm assumes all the words are independent of each other. The features are the set of words which were chosen using TF-IDF and labels are the set of categories. The evaluation metrics used for this task is Precision and Recall. Root Mean Square Error was used to calculate the amount of deviation in predicting the categories. The training to test data set ratio was 80:20.
 
+Worked on a data set that contained every unique business id with corresponding categories of Restaurants that belong to it and every review associated with that id. Followed the Machine Learning Approach and used Multinomial Naive Bayes Classification algorithm as this is a multi label classification problem. Library used for this task was Weka Library.
+
+The features are the set of words which were chosen using TF-IDF and labels are the set of categories. The evaluation metrics used for this task is Precision and Recall. Root Mean Square Error was used to calculate the amount of deviation in predicting the categories. The training to test data set ratio was k fold cross validation with a factor of 5 across the data set.
+
++----------------------------+------------+--------------------+----------------+
+| Algorithm/Metric           | Accuracy   | Average Precision  | Average Recall |
++============================+============+====================+================+
+| Multinomial Naive Bayes    | 35.35%     |        0.33        |     0.353      |
++----------------------------+------------+--------------------+----------------+
+| Naive Bayes                | 32.34%     |        0.34        |     0.323      |
++----------------------------+------------+--------------------+----------------+
+| SMO (SVM using Poly Kernel)| 30.41%     |        0.294       |     0.304      |
++----------------------------+------------+--------------------+----------------+
+| Decision Trees             | 27.41%     |        0.266       |     0.274      |
++----------------------------+------------+--------------------+----------------+
+
 Task II
 =======
 
