@@ -20,4 +20,9 @@ Try to predict the review rating from the review text. We try couple of approach
 3. The last approach is a kind of un-supervised learning approach where we try to use SentiWordNet and Stanford NLP. Stanford NLP is used for POS tagging. Once the text is tagged, SentiWordNet is used to get the sentiment score based on the POS and the word. We then choose the top 20 words based on the sentiment score and come up with the sentiment of the text. Based on this sentiment score, the review is categorized into ratings from 1 to 5.
 
 .. image:: TaskII/TaskIICompare.png
+.. image:: TaskII/TaskIICompare.png
+    :width: 200px
+    :align: center
+    :height: 100px
+    :alt: alternate text
 
