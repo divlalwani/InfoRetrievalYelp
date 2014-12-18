@@ -1,6 +1,6 @@
 //*********************************************************************************************
-//	Created By Jayagowri
-//	Note:	Download the package from StandfordNLP site and replace the demo file with this file.
+// Created By Jayagowri
+// Note:	Download the package from StandfordNLP site and replace the demo file with this file.
 //*********************************************************************************************
 import java.io.*;
 import java.nio.file.Files;
